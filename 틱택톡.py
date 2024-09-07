@@ -26,7 +26,6 @@ def referee(x):
 
 num = 0
 board()
-# print(f'{A[0]}\n{A[1]}\n{A[2]}')
 while True:
     B, C = map(int, input().split())
     if (B > 3 or C > 3) or (B < 1 or C < 1):
@@ -38,37 +37,11 @@ while True:
         num += 1
         if referee('O'):
             break
-        # print(f'{A[0]}\n{A[1]}\n{A[2]}')
-        # if A[B-1][C-1] == A[B-1][C-2] == A[B-1][C-3] == 'O':
-        #     print(A[B-1][C-1], "VICTORY!")
-        #     break
-        # elif A[B-1][C-1] == A[B-2][C-1] == A[B-3][C-1] == 'O':
-        #     print(A[B-1][C-1], "VICTORY!")
-        #     break
-        # elif A[0][0] == A[1][1] == A[2][2] == 'O':
-        #     print(A[0][0], "VICTORY!")
-        #     break
-        # elif A[0][2] == A[1][1] == A[2][0] == 'O':
-        #     print(A[0][2], "VICTORY!")
-        #     break
     elif num % 2 == 1:
         A[B-1][C-1] = 'X'
         num += 1
         if referee('X'):
             break
-        # print(f'{A[0]}\n{A[1]}\n{A[2]}')
-        # if A[B-1][C-1] == A[B-1][C-2] == A[B-1][C-3] == 'X':
-        #     print(A[B-1][C-1], "VICTORY!")
-        #     break
-        # elif A[B-1][C-1] == A[B-2][C-1] == A[B-3][C-1] == 'X':
-        #     print(A[B-1][C-1], "VICTORY!")
-        #     break
-        # elif A[0][0] == A[1][1] == A[2][2] == 'X':
-        #     print(A[0][0], "VICTORY!")
-        #     break
-        # elif A[0][2] == A[1][1] == A[2][0] == 'X':
-        #     print(A[0][2], "VICTORY!")
-        #     break
     if num == 9:
         print("무승부!!\n리겜???")
         num = 0
